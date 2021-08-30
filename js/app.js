@@ -69,3 +69,4 @@ document.onkeydown = function(e){
 }
 
 document.onload(fetchData(randomNumber(0,899)));
+onkeydown();
