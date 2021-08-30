@@ -7,6 +7,7 @@ const input_search = document.getElementById("search_name");
 const btn_refresh = document.getElementById("btn-refresh");
 const btn_search = document.getElementById("btn-search");
 
+
 const randomNumber = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -55,6 +56,7 @@ btn_search.addEventListener('click', () => {
         input_search.className = "error"
     }else{
         input_search.classList.remove('error');
+        input_search.value.replace(/ /g, "");
         fetchData(input_search.value);
         input_search.value = "";
     }
