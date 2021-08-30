@@ -61,17 +61,4 @@ btn_search.addEventListener('click', () => {
     }
 });
 
-document.onkeydown = function(e){
-    var ev = document.all ? window.event : e;
-    if(ev.keyCode==13) {
-        if(input_search.value === "" || input_search.value === null){
-            input_search.className = "error"
-        }else{
-            input_search.classList.remove('error');
-            fetchData(input_search.value.replace(/ /g, ""));
-            input_search.value = "";
-        }
-    }
-}
-
 document.onload(fetchData(randomNumber(0,899)));
