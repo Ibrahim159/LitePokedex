@@ -56,8 +56,8 @@ btn_search.addEventListener('click', () => {
         input_search.className = "error"
     }else{
         input_search.classList.remove('error');
-        input_search.value.replace(/ /g, "");
-        fetchData(input_search.value);
+        
+        fetchData(input_search.value.replace(/ /g, ""));
         input_search.value = "";
     }
 });
