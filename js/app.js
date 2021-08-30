@@ -56,10 +56,16 @@ btn_search.addEventListener('click', () => {
         input_search.className = "error"
     }else{
         input_search.classList.remove('error');
-        
         fetchData(input_search.value.replace(/ /g, ""));
         input_search.value = "";
     }
 });
+
+document.onkeydown = function(e){
+    var ev = document.all ? window.event : e;
+    if(ev.keyCode==13) {
+        alert("asdasd");
+    }
+}
 
 document.onload(fetchData(randomNumber(0,899)));
